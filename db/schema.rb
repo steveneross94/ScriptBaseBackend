@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_192150) do
+ActiveRecord::Schema.define(version: 2020_08_04_235325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,13 +26,13 @@ ActiveRecord::Schema.define(version: 2020_08_04_192150) do
     t.string "name"
     t.string "common_name"
     t.string "description"
-    t.integer "ndc_num"
     t.boolean "generic_option", default: false
     t.boolean "alternative_option", default: false
     t.integer "price"
-    t.string "img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "ndc_num"
+    t.string "side_effects"
   end
 
   create_table "generics", force: :cascade do |t|
