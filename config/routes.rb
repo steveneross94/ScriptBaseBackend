@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
   namespace :api do
     namespace :v1 do
-      resources :brandnames
+      resources :brand_names
     end
   end
   namespace :api do

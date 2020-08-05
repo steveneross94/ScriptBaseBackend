@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_235325) do
+ActiveRecord::Schema.define(version: 2020_08_05_160128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_235325) do
   create_table "alternatives", force: :cascade do |t|
     t.integer "brand_name_id"
     t.string "name"
-    t.integer "price"
+    t.string "price"
     t.string "description"
   end
 
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_235325) do
     t.string "description"
     t.boolean "generic_option", default: false
     t.boolean "alternative_option", default: false
-    t.integer "price"
+    t.string "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "ndc_num"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_235325) do
   create_table "generics", force: :cascade do |t|
     t.integer "brand_name_id"
     t.string "name"
-    t.integer "price"
+    t.string "price"
   end
 
   create_table "prescriptions", force: :cascade do |t|
