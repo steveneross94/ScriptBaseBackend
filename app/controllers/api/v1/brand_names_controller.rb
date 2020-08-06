@@ -1,7 +1,7 @@
 class Api::V1::BrandNamesController < ApplicationController
     def index
         brandnames = BrandName.all
-        render json: brandnames
+        render json: brandnames, include: [:generics, :alternatives]
     end 
 
     def create
