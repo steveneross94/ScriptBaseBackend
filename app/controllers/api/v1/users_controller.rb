@@ -24,7 +24,10 @@ class Api::V1::UsersController < ApplicationController
 
     def show
         user = User.find(params[:id])
-        render json: user
+        render json: user, :include => {
+			:prescriptions => { :include => :brand_name}
+		}
+
     end
 
     def update

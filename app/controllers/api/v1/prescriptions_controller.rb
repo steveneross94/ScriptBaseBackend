@@ -1,7 +1,7 @@
 class Api::V1::PrescriptionsController < ApplicationController
     def index
         prescriptions = Prescription.all
-        render json: prescription
+        render json: prescriptions, include: [:brand_name]
     end 
 
     def create
