@@ -5,7 +5,7 @@ require 'json'
 class Api::V1::ArticlesController < ApplicationController
     def index
         article_api_key = ENV['article_api_key']
-        articles = fetch_url("http://newsapi.org/v2/everything?q=health+insurance&language=en&from=2020-08-10&sortBy=popularity&apiKey=#{article_api_key}")
+        articles = fetch_url("http://newsapi.org/v2/everything?q=health+insurance&language=en&sortBy=popularity&apiKey=#{article_api_key}")
         render json: articles
     end 
 
